@@ -19,7 +19,8 @@ export const counterSlice = createSlice({
     },
 });
 
-export const selectCount = (state) => state.counter.value
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const selectCount = (state: any) => state.counter.value
 
 export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 export default counterSlice.reducer;
